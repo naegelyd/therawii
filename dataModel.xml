@@ -1,0 +1,1176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PlayFullscreen>true</PlayFullscreen>
+  <Therapies>
+    <Therapy>
+      <Name>Dynamic Balance Shift</Name>
+      <tasks>
+        <endCondition xsi:type="Repeat_rEndCondition">
+          <isNewExecution>false</isNewExecution>
+          <numRepeats>1</numRepeats>
+        </endCondition>
+        <Name>root</Name>
+        <totalReps>0</totalReps>
+        <currRep>0</currRep>
+        <tasks>
+          <Task xsi:type="DialogTask">
+            <endCondition xsi:type="TimeLimitEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Type>TotalTime</Type>
+              <TimeLimit>5</TimeLimit>
+              <inRegion>false</inRegion>
+            </endCondition>
+            <Name>Dynamic Balance</Name>
+            <totalReps>0</totalReps>
+            <currRep>0</currRep>
+            <DisplayText>This task will measure shifting of balance.
+
+Move the cursor to the shaded area and hold for 
+two seconds.  This task will repeat multiple times 
+with successively smaller target areas.</DisplayText>
+          </Task>
+          <Task xsi:type="RepeatTask">
+            <endCondition xsi:type="Repeat_rEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <numRepeats>5</numRepeats>
+            </endCondition>
+            <Name>Balance Shift</Name>
+            <totalReps>0</totalReps>
+            <currRep>0</currRep>
+            <tasks>
+              <Task xsi:type="Task2D">
+                <endCondition xsi:type="TimeLimitEndCondition">
+                  <isNewExecution>false</isNewExecution>
+                  <Type>TimeInRegion</Type>
+                  <TimeLimit>2</TimeLimit>
+                  <inRegion>false</inRegion>
+                </endCondition>
+                <Name>Left Area</Name>
+                <totalReps>0</totalReps>
+                <currRep>0</currRep>
+                <region>
+                  <Shape>Rectangle</Shape>
+                  <regionEnabled>false</regionEnabled>
+                  <rParams>
+                    <item>
+                      <key>
+                        <regPT>X</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Static</SL_pos>
+                          <SL_size>Dynamic</SL_size>
+                          <pos>
+                            <float>-1</float>
+                            <float>-0.7</float>
+                          </pos>
+                          <size>
+                            <float>0.5</float>
+                            <float>0.1</float>
+                          </size>
+                          <cPos>0</cPos>
+                          <cSize>0</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                    <item>
+                      <key>
+                        <regPT>Y</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Static</SL_pos>
+                          <SL_size>Dynamic</SL_size>
+                          <pos>
+                            <float>0</float>
+                            <float>0</float>
+                          </pos>
+                          <size>
+                            <float>0.5</float>
+                            <float>0.1</float>
+                          </size>
+                          <cPos>0</cPos>
+                          <cSize>0</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                    <item>
+                      <key>
+                        <regPT>Z</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Static</SL_pos>
+                          <SL_size>Static</SL_size>
+                          <pos>
+                            <float>0</float>
+                            <float>0</float>
+                          </pos>
+                          <size>
+                            <float>0</float>
+                            <float>0</float>
+                          </size>
+                          <cPos>0</cPos>
+                          <cSize>0</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                  </rParams>
+                </region>
+                <primaryInput xsi:type="InputBalanceBoard" />
+                <inputHandling>Absolute</inputHandling>
+                <additionalInput />
+                <performanceMetric>TotalTime</performanceMetric>
+                <regionEnabled>true</regionEnabled>
+              </Task>
+              <Task xsi:type="Task2D">
+                <endCondition xsi:type="TimeLimitEndCondition">
+                  <isNewExecution>false</isNewExecution>
+                  <Type>TimeInRegion</Type>
+                  <TimeLimit>2</TimeLimit>
+                  <inRegion>false</inRegion>
+                </endCondition>
+                <Name>Right Area</Name>
+                <totalReps>0</totalReps>
+                <currRep>0</currRep>
+                <region>
+                  <Shape>Rectangle</Shape>
+                  <regionEnabled>false</regionEnabled>
+                  <rParams>
+                    <item>
+                      <key>
+                        <regPT>X</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Static</SL_pos>
+                          <SL_size>Dynamic</SL_size>
+                          <pos>
+                            <float>0</float>
+                            <float>0.7</float>
+                          </pos>
+                          <size>
+                            <float>0.5</float>
+                            <float>0.1</float>
+                          </size>
+                          <cPos>0</cPos>
+                          <cSize>0</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                    <item>
+                      <key>
+                        <regPT>Y</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Static</SL_pos>
+                          <SL_size>Dynamic</SL_size>
+                          <pos>
+                            <float>0</float>
+                            <float>0</float>
+                          </pos>
+                          <size>
+                            <float>0.5</float>
+                            <float>0.1</float>
+                          </size>
+                          <cPos>0</cPos>
+                          <cSize>0</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                    <item>
+                      <key>
+                        <regPT>Z</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Static</SL_pos>
+                          <SL_size>Static</SL_size>
+                          <pos>
+                            <float>0</float>
+                            <float>0</float>
+                          </pos>
+                          <size>
+                            <float>0</float>
+                            <float>0</float>
+                          </size>
+                          <cPos>0</cPos>
+                          <cSize>0</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                  </rParams>
+                </region>
+                <primaryInput xsi:type="InputBalanceBoard" />
+                <inputHandling>Absolute</inputHandling>
+                <additionalInput />
+                <performanceMetric>TotalTime</performanceMetric>
+                <regionEnabled>true</regionEnabled>
+              </Task>
+            </tasks>
+            <RepeatEndType>Repetitions</RepeatEndType>
+            <TimeLimit>30</TimeLimit>
+            <numRepeats>5</numRepeats>
+            <currTask>0</currTask>
+            <iterRepeat>0</iterRepeat>
+          </Task>
+        </tasks>
+        <RepeatEndType>Repetitions</RepeatEndType>
+        <TimeLimit>30</TimeLimit>
+        <numRepeats>1</numRepeats>
+        <currTask>0</currTask>
+        <iterRepeat>0</iterRepeat>
+      </tasks>
+    </Therapy>
+    <Therapy>
+      <Name>Mouse Demo</Name>
+      <tasks>
+        <endCondition xsi:type="Repeat_rEndCondition">
+          <isNewExecution>true</isNewExecution>
+          <numRepeats>1</numRepeats>
+        </endCondition>
+        <Name>root</Name>
+        <totalReps>0</totalReps>
+        <currRep>0</currRep>
+        <tasks>
+          <Task xsi:type="DialogTask">
+            <endCondition xsi:type="ButtonEndCondition">
+              <isNewExecution>true</isNewExecution>
+              <Button>LeftMouse</Button>
+            </endCondition>
+            <Name>Intro</Name>
+            <totalReps>1</totalReps>
+            <currRep>0</currRep>
+            <DisplayText>This is an intro to the TheraWii program.  
+
+On the following screen, try to keep the cursor in 
+the shaded area for 5 seconds.</DisplayText>
+          </Task>
+          <Task xsi:type="Task2D">
+            <endCondition xsi:type="TimeLimitEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Type>TimeInRegion</Type>
+              <TimeLimit>5</TimeLimit>
+              <inRegion>true</inRegion>
+            </endCondition>
+            <Name>Hold Position</Name>
+            <totalReps>1</totalReps>
+            <currRep>0</currRep>
+            <region>
+              <Shape>Rectangle</Shape>
+              <regionEnabled>false</regionEnabled>
+              <rParams>
+                <item>
+                  <key>
+                    <regPT>X</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>-0.5</float>
+                      </pos>
+                      <size>
+                        <float>0.1</float>
+                        <float>0.2</float>
+                      </size>
+                      <cPos>-0.3</cPos>
+                      <cSize>0.2</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+                <item>
+                  <key>
+                    <regPT>Y</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0.5</float>
+                      </pos>
+                      <size>
+                        <float>0.1</float>
+                        <float>0.1</float>
+                      </size>
+                      <cPos>0.5</cPos>
+                      <cSize>0.1</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+                <item>
+                  <key>
+                    <regPT>Z</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0</float>
+                        <float>0</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+              </rParams>
+            </region>
+            <primaryInput xsi:type="InputMouse" />
+            <inputHandling>Differential</inputHandling>
+            <additionalInput />
+            <performanceMetric>TimeInRegion</performanceMetric>
+            <regionEnabled>true</regionEnabled>
+          </Task>
+          <Task xsi:type="DialogTask">
+            <endCondition xsi:type="TimeLimitEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Type>TotalTime</Type>
+              <TimeLimit>5</TimeLimit>
+              <inRegion>false</inRegion>
+            </endCondition>
+            <Name>Random Movement</Name>
+            <totalReps>1</totalReps>
+            <currRep>0</currRep>
+            <DisplayText>Move the cursor to the shaded area and hold for 
+2 seconds.</DisplayText>
+          </Task>
+          <Task xsi:type="RepeatTask">
+            <endCondition xsi:type="Repeat_rEndCondition">
+              <isNewExecution>true</isNewExecution>
+              <numRepeats>5</numRepeats>
+            </endCondition>
+            <Name>Random</Name>
+            <totalReps>1</totalReps>
+            <currRep>0</currRep>
+            <tasks>
+              <Task xsi:type="Task2D">
+                <endCondition xsi:type="TimeLimitEndCondition">
+                  <isNewExecution>false</isNewExecution>
+                  <Type>TimeInRegion</Type>
+                  <TimeLimit>2</TimeLimit>
+                  <inRegion>true</inRegion>
+                </endCondition>
+                <Name>Random</Name>
+                <totalReps>5</totalReps>
+                <currRep>4</currRep>
+                <region>
+                  <Shape>Ellipse</Shape>
+                  <regionEnabled>false</regionEnabled>
+                  <rParams>
+                    <item>
+                      <key>
+                        <regPT>X</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Random</SL_pos>
+                          <SL_size>Dynamic</SL_size>
+                          <pos>
+                            <float>-0.8</float>
+                            <float>0.8</float>
+                          </pos>
+                          <size>
+                            <float>0.5</float>
+                            <float>0.1</float>
+                          </size>
+                          <cPos>0.55</cPos>
+                          <cSize>0.100000016</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                    <item>
+                      <key>
+                        <regPT>Y</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Random</SL_pos>
+                          <SL_size>Dynamic</SL_size>
+                          <pos>
+                            <float>-0.8</float>
+                            <float>0.8</float>
+                          </pos>
+                          <size>
+                            <float>0.5</float>
+                            <float>0.1</float>
+                          </size>
+                          <cPos>0.88</cPos>
+                          <cSize>0.100000016</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                    <item>
+                      <key>
+                        <regPT>Z</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Static</SL_pos>
+                          <SL_size>Static</SL_size>
+                          <pos>
+                            <float>0</float>
+                            <float>0</float>
+                          </pos>
+                          <size>
+                            <float>0</float>
+                            <float>0</float>
+                          </size>
+                          <cPos>0</cPos>
+                          <cSize>0</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                  </rParams>
+                </region>
+                <primaryInput xsi:type="InputMouse" />
+                <inputHandling>Absolute</inputHandling>
+                <additionalInput />
+                <performanceMetric>TimeOutRegion</performanceMetric>
+                <regionEnabled>true</regionEnabled>
+              </Task>
+            </tasks>
+            <RepeatEndType>Repetitions</RepeatEndType>
+            <TimeLimit>30</TimeLimit>
+            <numRepeats>5</numRepeats>
+            <currTask>0</currTask>
+            <iterRepeat>5</iterRepeat>
+          </Task>
+          <Task xsi:type="DialogTask">
+            <endCondition xsi:type="TimeLimitEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Type>TotalTime</Type>
+              <TimeLimit>5</TimeLimit>
+              <inRegion>false</inRegion>
+            </endCondition>
+            <Name>Dynamic Movement</Name>
+            <totalReps>1</totalReps>
+            <currRep>0</currRep>
+            <DisplayText>Keep moving the cursor into the highlighted region.  </DisplayText>
+          </Task>
+          <Task xsi:type="RepeatTask">
+            <endCondition xsi:type="Repeat_rEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <numRepeats>10</numRepeats>
+            </endCondition>
+            <Name>Dynamic Movement</Name>
+            <totalReps>1</totalReps>
+            <currRep>0</currRep>
+            <tasks>
+              <Task xsi:type="Task2D">
+                <endCondition xsi:type="TimeLimitEndCondition">
+                  <isNewExecution>false</isNewExecution>
+                  <Type>TimeInRegion</Type>
+                  <TimeLimit>0.1</TimeLimit>
+                  <inRegion>true</inRegion>
+                </endCondition>
+                <Name>Dynamic 2D</Name>
+                <totalReps>10</totalReps>
+                <currRep>9</currRep>
+                <region>
+                  <Shape>Rectangle</Shape>
+                  <regionEnabled>false</regionEnabled>
+                  <rParams>
+                    <item>
+                      <key>
+                        <regPT>X</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Dynamic</SL_pos>
+                          <SL_size>Static</SL_size>
+                          <pos>
+                            <float>-0.8</float>
+                            <float>0.8</float>
+                          </pos>
+                          <size>
+                            <float>0.1</float>
+                            <float>0.1</float>
+                          </size>
+                          <cPos>0.9</cPos>
+                          <cSize>0.1</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                    <item>
+                      <key>
+                        <regPT>Y</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Dynamic</SL_pos>
+                          <SL_size>Static</SL_size>
+                          <pos>
+                            <float>-0.8</float>
+                            <float>0.8</float>
+                          </pos>
+                          <size>
+                            <float>0.1</float>
+                            <float>0.1</float>
+                          </size>
+                          <cPos>0.9</cPos>
+                          <cSize>0.1</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                    <item>
+                      <key>
+                        <regPT>Z</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Static</SL_pos>
+                          <SL_size>Static</SL_size>
+                          <pos>
+                            <float>0</float>
+                            <float>0</float>
+                          </pos>
+                          <size>
+                            <float>0</float>
+                            <float>0</float>
+                          </size>
+                          <cPos>0</cPos>
+                          <cSize>0</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                  </rParams>
+                </region>
+                <primaryInput xsi:type="InputMouse" />
+                <inputHandling>Absolute</inputHandling>
+                <additionalInput />
+                <performanceMetric>TotalTime</performanceMetric>
+                <regionEnabled>true</regionEnabled>
+              </Task>
+            </tasks>
+            <RepeatEndType>Repetitions</RepeatEndType>
+            <TimeLimit>30</TimeLimit>
+            <numRepeats>10</numRepeats>
+            <currTask>0</currTask>
+            <iterRepeat>910</iterRepeat>
+          </Task>
+        </tasks>
+        <RepeatEndType>Repetitions</RepeatEndType>
+        <TimeLimit>30</TimeLimit>
+        <numRepeats>1</numRepeats>
+        <currTask>1</currTask>
+        <iterRepeat>0</iterRepeat>
+      </tasks>
+    </Therapy>
+    <Therapy>
+      <Name>Random Positioning</Name>
+      <tasks>
+        <endCondition xsi:type="Repeat_rEndCondition">
+          <isNewExecution>false</isNewExecution>
+          <numRepeats>1</numRepeats>
+        </endCondition>
+        <Name>root</Name>
+        <totalReps>0</totalReps>
+        <currRep>0</currRep>
+        <tasks>
+          <Task xsi:type="DialogTask">
+            <endCondition xsi:type="TimeLimitEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Type>TotalTime</Type>
+              <TimeLimit>5</TimeLimit>
+              <inRegion>false</inRegion>
+            </endCondition>
+            <Name>Random Position</Name>
+            <totalReps>0</totalReps>
+            <currRep>0</currRep>
+            <DisplayText>This task will randomly place the target region 
+on screen.  Move the cursor within the region 
+and hold for 2 seconds.</DisplayText>
+          </Task>
+          <Task xsi:type="RepeatTask">
+            <endCondition xsi:type="Repeat_rEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <numRepeats>7</numRepeats>
+            </endCondition>
+            <Name>Random</Name>
+            <totalReps>0</totalReps>
+            <currRep>0</currRep>
+            <tasks>
+              <Task xsi:type="Task2D">
+                <endCondition xsi:type="TimeLimitEndCondition">
+                  <isNewExecution>false</isNewExecution>
+                  <Type>TimeInRegion</Type>
+                  <TimeLimit>2</TimeLimit>
+                  <inRegion>false</inRegion>
+                </endCondition>
+                <Name>Random Ellipse</Name>
+                <totalReps>0</totalReps>
+                <currRep>0</currRep>
+                <region>
+                  <Shape>Ellipse</Shape>
+                  <regionEnabled>false</regionEnabled>
+                  <rParams>
+                    <item>
+                      <key>
+                        <regPT>X</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Random</SL_pos>
+                          <SL_size>Static</SL_size>
+                          <pos>
+                            <float>-0.7</float>
+                            <float>0.7</float>
+                          </pos>
+                          <size>
+                            <float>0.1</float>
+                            <float>0.2</float>
+                          </size>
+                          <cPos>0</cPos>
+                          <cSize>0</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                    <item>
+                      <key>
+                        <regPT>Y</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Random</SL_pos>
+                          <SL_size>Static</SL_size>
+                          <pos>
+                            <float>-0.7</float>
+                            <float>0.7</float>
+                          </pos>
+                          <size>
+                            <float>0.1</float>
+                            <float>0.2</float>
+                          </size>
+                          <cPos>0</cPos>
+                          <cSize>0</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                    <item>
+                      <key>
+                        <regPT>Z</regPT>
+                      </key>
+                      <value>
+                        <RegionParameter>
+                          <SL_pos>Static</SL_pos>
+                          <SL_size>Static</SL_size>
+                          <pos>
+                            <float>0</float>
+                            <float>0</float>
+                          </pos>
+                          <size>
+                            <float>0</float>
+                            <float>0</float>
+                          </size>
+                          <cPos>0</cPos>
+                          <cSize>0</cSize>
+                          <sLabel>Static</sLabel>
+                        </RegionParameter>
+                      </value>
+                    </item>
+                  </rParams>
+                </region>
+                <primaryInput xsi:type="InputBalanceBoard" />
+                <inputHandling>Absolute</inputHandling>
+                <additionalInput />
+                <performanceMetric>PathEfficiency</performanceMetric>
+                <regionEnabled>true</regionEnabled>
+              </Task>
+            </tasks>
+            <RepeatEndType>Repetitions</RepeatEndType>
+            <TimeLimit>30</TimeLimit>
+            <numRepeats>7</numRepeats>
+            <currTask>0</currTask>
+            <iterRepeat>0</iterRepeat>
+          </Task>
+        </tasks>
+        <RepeatEndType>Repetitions</RepeatEndType>
+        <TimeLimit>30</TimeLimit>
+        <numRepeats>1</numRepeats>
+        <currTask>0</currTask>
+        <iterRepeat>0</iterRepeat>
+      </tasks>
+    </Therapy>
+    <Therapy>
+      <Name>Sit to Stand</Name>
+      <tasks>
+        <endCondition xsi:type="Repeat_rEndCondition">
+          <isNewExecution>false</isNewExecution>
+          <numRepeats>1</numRepeats>
+        </endCondition>
+        <Name>root</Name>
+        <totalReps>0</totalReps>
+        <currRep>0</currRep>
+        <tasks>
+          <Task xsi:type="DialogTask">
+            <endCondition xsi:type="ButtonEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Button>LeftMouse</Button>
+            </endCondition>
+            <Name>Begin</Name>
+            <totalReps>0</totalReps>
+            <currRep>0</currRep>
+            <DisplayText>Begin in a seated position with your feet 
+resting on the Wii Balance Board.
+
+Try to stand keeping your center of balance steady.</DisplayText>
+          </Task>
+          <Task xsi:type="Task2D">
+            <endCondition xsi:type="TimeLimitEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Type>TimeInRegion</Type>
+              <TimeLimit>2</TimeLimit>
+              <inRegion>false</inRegion>
+            </endCondition>
+            <Name>Stand</Name>
+            <totalReps>0</totalReps>
+            <currRep>0</currRep>
+            <region>
+              <Shape>Rectangle</Shape>
+              <regionEnabled>false</regionEnabled>
+              <rParams>
+                <item>
+                  <key>
+                    <regPT>X</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0.1</float>
+                        <float>0.1</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+                <item>
+                  <key>
+                    <regPT>Y</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0.1</float>
+                        <float>0.1</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+                <item>
+                  <key>
+                    <regPT>Z</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0</float>
+                        <float>0</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+              </rParams>
+            </region>
+            <primaryInput xsi:type="InputBalanceBoard" />
+            <inputHandling>Absolute</inputHandling>
+            <additionalInput />
+            <performanceMetric>PathEfficiency</performanceMetric>
+            <regionEnabled>true</regionEnabled>
+          </Task>
+        </tasks>
+        <RepeatEndType>Repetitions</RepeatEndType>
+        <TimeLimit>30</TimeLimit>
+        <numRepeats>1</numRepeats>
+        <currTask>0</currTask>
+        <iterRepeat>0</iterRepeat>
+      </tasks>
+    </Therapy>
+    <Therapy>
+      <Name>Static Balance</Name>
+      <tasks>
+        <endCondition xsi:type="Repeat_rEndCondition">
+          <isNewExecution>false</isNewExecution>
+          <numRepeats>1</numRepeats>
+        </endCondition>
+        <Name>root</Name>
+        <totalReps>0</totalReps>
+        <currRep>0</currRep>
+        <tasks>
+          <Task xsi:type="DialogTask">
+            <endCondition xsi:type="TimeLimitEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Type>TotalTime</Type>
+              <TimeLimit>5</TimeLimit>
+              <inRegion>false</inRegion>
+            </endCondition>
+            <Name>Static Balance</Name>
+            <totalReps>0</totalReps>
+            <currRep>0</currRep>
+            <DisplayText>The following task will measure your center 
+of balance.  Try to hold the curor near the 
+center for 10 seconds.  </DisplayText>
+          </Task>
+          <Task xsi:type="Task2D">
+            <endCondition xsi:type="TimeLimitEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Type>TotalTime</Type>
+              <TimeLimit>10</TimeLimit>
+              <inRegion>false</inRegion>
+            </endCondition>
+            <Name>Static Balance Task</Name>
+            <totalReps>0</totalReps>
+            <currRep>0</currRep>
+            <region>
+              <Shape>Rectangle</Shape>
+              <regionEnabled>false</regionEnabled>
+              <rParams>
+                <item>
+                  <key>
+                    <regPT>X</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0.1</float>
+                        <float>0.1</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+                <item>
+                  <key>
+                    <regPT>Y</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0.1</float>
+                        <float>0.1</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+                <item>
+                  <key>
+                    <regPT>Z</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0</float>
+                        <float>0</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+              </rParams>
+            </region>
+            <primaryInput xsi:type="InputBalanceBoard" />
+            <inputHandling>Absolute</inputHandling>
+            <additionalInput />
+            <performanceMetric>MotionArea</performanceMetric>
+            <regionEnabled>false</regionEnabled>
+          </Task>
+        </tasks>
+        <RepeatEndType>Repetitions</RepeatEndType>
+        <TimeLimit>30</TimeLimit>
+        <numRepeats>1</numRepeats>
+        <currTask>0</currTask>
+        <iterRepeat>0</iterRepeat>
+      </tasks>
+    </Therapy>
+    <Therapy>
+      <Name>Time to Boundary</Name>
+      <tasks>
+        <endCondition xsi:type="Repeat_rEndCondition">
+          <isNewExecution>false</isNewExecution>
+          <numRepeats>1</numRepeats>
+        </endCondition>
+        <Name>root</Name>
+        <totalReps>0</totalReps>
+        <currRep>0</currRep>
+        <tasks>
+          <Task xsi:type="DialogTask">
+            <endCondition xsi:type="TimeLimitEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Type>TotalTime</Type>
+              <TimeLimit>5</TimeLimit>
+              <inRegion>false</inRegion>
+            </endCondition>
+            <Name>Time to Boundary</Name>
+            <totalReps>0</totalReps>
+            <currRep>0</currRep>
+            <DisplayText>This task will record time to boundary.  
+
+Keep the cursor in the center region for 2 seconds.
+
+Then move the cursor to the new region as quickly as possible.</DisplayText>
+          </Task>
+          <Task xsi:type="Task2D">
+            <endCondition xsi:type="TimeLimitEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Type>TimeInRegion</Type>
+              <TimeLimit>2</TimeLimit>
+              <inRegion>false</inRegion>
+            </endCondition>
+            <Name>Center</Name>
+            <totalReps>0</totalReps>
+            <currRep>0</currRep>
+            <region>
+              <Shape>Rectangle</Shape>
+              <regionEnabled>false</regionEnabled>
+              <rParams>
+                <item>
+                  <key>
+                    <regPT>X</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0.1</float>
+                        <float>0.2</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+                <item>
+                  <key>
+                    <regPT>Y</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0.1</float>
+                        <float>0.2</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+                <item>
+                  <key>
+                    <regPT>Z</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0</float>
+                        <float>0</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+              </rParams>
+            </region>
+            <primaryInput xsi:type="InputBalanceBoard" />
+            <inputHandling>Absolute</inputHandling>
+            <additionalInput />
+            <performanceMetric>TotalTime</performanceMetric>
+            <regionEnabled>true</regionEnabled>
+          </Task>
+          <Task xsi:type="Task2D">
+            <endCondition xsi:type="TimeLimitEndCondition">
+              <isNewExecution>false</isNewExecution>
+              <Type>TimeInRegion</Type>
+              <TimeLimit>0.1</TimeLimit>
+              <inRegion>false</inRegion>
+            </endCondition>
+            <Name>Top Boundary</Name>
+            <totalReps>0</totalReps>
+            <currRep>0</currRep>
+            <region>
+              <Shape>Rectangle</Shape>
+              <regionEnabled>false</regionEnabled>
+              <rParams>
+                <item>
+                  <key>
+                    <regPT>X</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0.1</float>
+                        <float>1</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+                <item>
+                  <key>
+                    <regPT>Y</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0.8</float>
+                      </pos>
+                      <size>
+                        <float>0.1</float>
+                        <float>0.1</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+                <item>
+                  <key>
+                    <regPT>Z</regPT>
+                  </key>
+                  <value>
+                    <RegionParameter>
+                      <SL_pos>Static</SL_pos>
+                      <SL_size>Static</SL_size>
+                      <pos>
+                        <float>0</float>
+                        <float>0</float>
+                      </pos>
+                      <size>
+                        <float>0</float>
+                        <float>0</float>
+                      </size>
+                      <cPos>0</cPos>
+                      <cSize>0</cSize>
+                      <sLabel>Static</sLabel>
+                    </RegionParameter>
+                  </value>
+                </item>
+              </rParams>
+            </region>
+            <primaryInput xsi:type="InputBalanceBoard" />
+            <inputHandling>Absolute</inputHandling>
+            <additionalInput />
+            <performanceMetric>TimeOutRegion</performanceMetric>
+            <regionEnabled>true</regionEnabled>
+          </Task>
+        </tasks>
+        <RepeatEndType>Repetitions</RepeatEndType>
+        <TimeLimit>30</TimeLimit>
+        <numRepeats>1</numRepeats>
+        <currTask>0</currTask>
+        <iterRepeat>0</iterRepeat>
+      </tasks>
+    </Therapy>
+  </Therapies>
+  <Profiles />
+</DataModel>

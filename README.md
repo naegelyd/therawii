@@ -1,4 +1,32 @@
-therawii
-========
+NAME
+    TheraWii
+    http://www.cs.drexel.edu/~dpn52/Therawii
 
-Application that gives Physical Therapy clinicians and researchers the ability to use commodity motion capture devices to gather quantitative data about patient movement and create customized interactions.
+    Tim Chagnon
+    Joe Kokinda
+    Andrew Meinert
+    Don Naegely
+
+DESCRIPTION
+    There is an emerging trend toward using video games as a means of increasing
+    patient engagement in physical therapy.  This trend is primarily driven by
+    the newest generation of consumer console systems which use motion-based
+    controls.  However, clinical research into the efficacy of these systems is
+    hindered by the inability to automatically collect data from systems and
+    software which were not intended for this purpose.
+
+    TheraWii a new piece of software that will give researchers the ability to
+    experiment and quantitatively assess the value of game-based therapy.  This
+    software will provide an extensible framework for games or interactive
+    experiments as well as an example suite of activities.  The key aspect of
+    this application will allow researchers to easily gather data from
+    motion-based input controls such as the Wii Remote.  Various reporting
+    methods and analysis tools will be provided for the gathered data.
+    
+REQUIREMENTS
+    Windows XP or Vista (32-bit)
+    Microsoft .NET 3.5
+    Microsoft Chart Controls
+    Microsoft XNA Framework 3.0
+
+Please see the User Manual for more detailed usage information.

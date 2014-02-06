@@ -1,0 +1,320 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AF1B3EB8-C095-4EDA-A1C4-F48B802AD34A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheraWii</RootNamespace>
+    <AssemblyName>TheraWii</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <StartupObject>
+    </StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.7.2.18, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BalanceBoardState.cs" />
+    <Compile Include="Basketball.cs" />
+    <Compile Include="FormAddInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddInput.Designer.cs">
+      <DependentUpon>FormAddInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPerformance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPerformance.Designer.cs">
+      <DependentUpon>FormPerformance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameTextBox.cs" />
+    <Compile Include="Cuboid.cs" />
+    <Compile Include="Ellipsoid.cs" />
+    <Compile Include="DimensionalTask.cs" />
+    <Compile Include="DScsv.cs" />
+    <Compile Include="FormProfileChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfileChooser.Designer.cs">
+      <DependentUpon>FormProfileChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoop.cs" />
+    <Compile Include="IRState.cs" />
+    <Compile Include="Line.cs" />
+    <Compile Include="InputDevice.cs" />
+    <Compile Include="InputHandling.cs" />
+    <Compile Include="StringLogicalComparer.cs" />
+    <Compile Include="NunchuckState.cs" />
+    <Compile Include="PerformanceMetric.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="RegionParameter.cs" />
+    <Compile Include="SerializableDictionary.cs" />
+    <Compile Include="Task3D.cs" />
+    <Compile Include="FormNewProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewProfile.Designer.cs">
+      <DependentUpon>FormNewProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewTherapy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewTherapy.Designer.cs">
+      <DependentUpon>FormNewTherapy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game.cs" />
+    <Compile Include="RepeatTask.cs" />
+    <Compile Include="DataModel.cs" />
+    <Compile Include="DataStorage.cs" />
+    <Compile Include="DialogTask.cs" />
+    <Compile Include="EndCondition.cs" />
+    <Compile Include="FormRepeatTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRepeatTask.designer.cs">
+      <DependentUpon>FormRepeatTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3DTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3DTask.Designer.cs">
+      <DependentUpon>Form3DTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddDevices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddDevices.Designer.cs">
+      <DependentUpon>FormAddDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNewTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewTask.Designer.cs">
+      <DependentUpon>FormNewTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSessionDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSessionDetail.Designer.cs">
+      <DependentUpon>FormSessionDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2DTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2DTask.Designer.cs">
+      <DependentUpon>Form2DTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddInput.resx">
+      <DependentUpon>FormAddInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewProfile.resx">
+      <DependentUpon>FormNewProfile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewTherapy.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormNewTherapy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPerformance.resx">
+      <DependentUpon>FormPerformance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfileChooser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormProfileChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRepeatTask.resx">
+      <DependentUpon>FormRepeatTask.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3DTask.resx">
+      <DependentUpon>Form3DTask.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddDevices.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAddDevices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewTask.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormNewTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSessionDetail.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormSessionDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2DTask.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form2DTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDialogTask.resx">
+      <DependentUpon>FormDialogTask.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\DataModel.datasource" />
+    <None Include="Properties\DataSources\FormMain.datasource" />
+    <None Include="Properties\DataSources\Therapy.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="FormDialogTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDialogTask.designer.cs">
+      <DependentUpon>FormDialogTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="Task2D.cs" />
+    <Compile Include="TaskData.cs" />
+    <Compile Include="Therapy.cs" />
+    <Compile Include="WiiControllerState.cs" />
+    <Compile Include="WiimoteState.cs" />
+    <Compile Include="WiiUse.cs" />
+    <Compile Include="WiiUseC.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico" />
+    <None Include="wiiuse.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
